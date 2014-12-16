@@ -1,0 +1,7 @@
+[user]
+	email = oed3933@gmail.com
+	name = Joel Torstensson
+[push]
+	default = simple
+[color]
+	ui = true

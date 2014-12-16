@@ -21,6 +21,8 @@ link $CONF awesome
 link $CONF kupfer
 link $CONF xmodmap
 link $CONF xresources
+link $CONF qutebrowser
+link $CONF git
 
 ## /etc/ files
 
