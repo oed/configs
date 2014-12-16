@@ -1,0 +1,24 @@
+#!/bin/bash
+
+## Symlinks all files from the git repository to wherever they should be.
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"/"
+CONF=$HOME"/.config/"
+ETC="/etc/"
+
+# Takes two parameters, the folder to copy to and the file to copy
+function link {
+    ln -fs $DIR$2 $1$2
+}
+
+## .config files
+link $CONF upm.properties
+link $CONF zathura
+link $CONF awesome
+link $CONF kupfer
+link $CONF xmodmap
+link $CONF xresources
+
+## /etc/ files
+
+
