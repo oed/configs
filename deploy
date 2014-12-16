@@ -8,7 +8,10 @@ ETC="/etc/"
 
 # Takes two parameters, the folder to copy to and the file to copy
 function link {
-    ln -fs $DIR$2 $1$2
+    if [ ! -h $1$2 ]
+    then
+        ln -fs $DIR$2 $1$2
+    fi
 }
 
 ## .config files
