@@ -6,11 +6,22 @@ DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"/"
 CONF=$HOME"/.config/"
 ETC="/etc/"
 
+# Links a file
 # Takes two parameters, the folder to copy to and the file to copy
 function link {
     if [ ! -h $1$2 ]
     then
         ln -fs $DIR$2 $1$2
+    fi
+}
+
+# Checks if a package is installed, if not, installs it
+# Takes one parameter, the package to check
+function checkInstallPkg {
+    pacman -Qq $1 &> /dev/null
+    if [ $? == "1" ]
+    then
+        sudo pacman -S $1
     fi
 }
 
@@ -26,4 +37,5 @@ link $CONF git
 
 ## /etc/ files
 
+## packages
 
