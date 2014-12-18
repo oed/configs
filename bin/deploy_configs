@@ -25,6 +25,10 @@ function checkInstallPkg {
     fi
 }
 
+## home files
+link $HOME"/" bin
+link $HOME"/" .profile
+
 ## .config files
 link $CONF upm.properties
 link $CONF zathura
