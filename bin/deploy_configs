@@ -2,7 +2,7 @@
 
 ## Symlinks all files from the git repository to wherever they should be.
 
-DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"/"
+DIR=$HOME"/.dotfiles/"
 CONF=$HOME"/.config/"
 ETC="/etc/"
 
@@ -28,6 +28,8 @@ function checkInstallPkg {
 ## home files
 link $HOME"/" bin
 link $HOME"/" .profile
+link $HOME"/" .xinitrc
+link $HOME"/" .bashrc
 
 ## .config files
 link $CONF upm.properties

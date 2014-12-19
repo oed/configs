@@ -1,5 +1,8 @@
 DIR="/tmp/"
 FILE="lock_background.png"
-scrot $DIR$FILE && convert -blur 0x3 $DIR$FILE $DIR$FILE
+scrot $DIR$FILE &&
+convert -blur 0x3 $DIR$FILE $DIR$FILE &&
 
-ln -fs $DIR$FILE $HOME"/.config/lock_background.png"
+ln -fs $DIR$FILE $HOME"/.config/lock_background.png" &&
+
+slimlock
