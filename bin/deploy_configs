@@ -37,6 +37,7 @@ link $HOME"/" bin
 link $HOME"/" .profile
 link $HOME"/" .xinitrc
 link $HOME"/" .bashrc
+link $HOME"/" .bash_profile
 
 ## .config files
 link $CONF upm.properties
