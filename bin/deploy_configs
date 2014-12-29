@@ -15,6 +15,13 @@ function link {
     fi
 }
 
+function sudolink {
+    if [ ! -h $1$2 ]
+    then
+        sudo ln -fs $DIR$2 $1$2
+    fi
+}
+
 # Checks if a package is installed, if not, installs it
 # Takes one parameter, the package to check
 function checkInstallPkg {
@@ -42,6 +49,8 @@ link $CONF qutebrowser
 link $CONF git
 
 ## /etc/ files
+sudolink $ETC slim.conf
+sudolink $ETC slimlock.conf
 
 ## packages
 
