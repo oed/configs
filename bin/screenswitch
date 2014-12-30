@@ -1,4 +1,6 @@
 #!/bin/bash
+# This script is for switching screens when I connect
+# my laptop to my two external monitors.
 
 SC_MAIN="eDP1"
 SC1="HDMI1"

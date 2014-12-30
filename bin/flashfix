@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script makes the flashplugin stay in fullscreen when it looses focus.
 sudo xxd  /usr/lib/mozilla/plugins/libflashplayer.so | sed -e 's/5f4e 4554 5f41 4354/5f5f 4554 5f41 4354/g' | xxd -r > tmp 
 sudo cp tmp /usr/lib/mozilla/plugins/libflashplayer.so 
 rm tmp
