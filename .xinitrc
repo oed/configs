@@ -1,7 +1,3 @@
-####
-# .xinitrc
-#### 
-
 #!/bin/sh
 
 # Source scripts in /etc/X11/xinit/xinitrc.d/
@@ -12,7 +8,6 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
     unset f
 fi
 
-
 kupfer --no-splash &
 unclutter &
 numlockx &
@@ -21,7 +16,12 @@ xrdb -merge ~/.config/xresources &
 nm-applet &
 xautolock -locker lockscreen -time 10 &
 
-## gnome keyring
+# load keyboard layout
+if [ -f $HOME/.config/xmodmap ]; then
+    /usr/bin/xmodmap $HOME/.config/xmodmap
+fi
+
+# gnome keyring
 # Start a D-Bus session
 source /etc/X11/xinit/xinitrc.d/30-dbus
 # Start GNOME Keyring
@@ -32,15 +32,9 @@ export GPG_AGENT_INFO
 export GNOME_KEYRING_CONTROL
 export GNOME_KEYRING_PID
 
-# load keyboard layout
-if [ -f $HOME/.config/xmodmap ]; then
-    /usr/bin/xmodmap $HOME/.config/xmodmap
-fi
-
-## fix javawindows
+# fix javawindows
 wmname LG3D
 
-### Start session
-## Awesome:
+# Start session
 exec awesome
 
