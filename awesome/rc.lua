@@ -384,8 +384,6 @@ awful.rules.rules = {
     { rule = { class = "gimp" },
       properties = { floating = true } },
     { rule = { class = "URxvt" },
-      properties = { opacity = 0.8 } },
-    { rule = { class = "terminology" },
       properties = { opacity = 0.9 } },
     { rule = { class = "Kupfer.py" },
       properties = { border_width = 0 } },
