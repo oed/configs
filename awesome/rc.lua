@@ -71,7 +71,7 @@ local layouts =
 
 -- {{{ Wallpaper
 if beautiful.wallpaper then
-    gears.wallpaper.maximized(beautiful.wallpaper, 1, false)
+--    gears.wallpaper.tiled(beautiful.wallpaper, 1, false)
 --    gears.wallpaper.maximized(beautiful.wallpaper, 2, false, {x=-1920})
 end
 -- }}}
@@ -80,6 +80,7 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {}
 for s = 1, screen.count() do
+    gears.wallpaper.tiled(beautiful.wallpaper, s, false)
     -- Each screen has its own tag table.
     tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
 end
@@ -374,8 +375,6 @@ awful.rules.rules = {
                      size_hints_honor = false } },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
-    { rule = { name = "dwb" },
-      properties = { floating = true } },
     -- upm
     { rule = { class = "com-_17od-upm-gui-MainWindow" },
       properties = { floating = true } },
@@ -384,11 +383,9 @@ awful.rules.rules = {
     { rule = { class = "gimp" },
       properties = { floating = true } },
     { rule = { class = "URxvt" },
-      properties = { opacity = 0.9 } },
+      properties = { opacity = 0.8 } },
     { rule = { class = "Kupfer.py" },
       properties = { border_width = 0 } },
-    { rule = { class = "Skype" },
-      properties = { tag = tags[1][9] } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },

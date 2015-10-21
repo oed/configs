@@ -5,12 +5,11 @@ URxvt.scrollBar: false
 URxvt.urgentOnBell: true
 
 ! font
-URxvt.font: xft:Inconsolata:size=11
+URxvt.font: xft:Inconsolata:size=8
 
 ! clickable urls
 URxvt.perl-ext-common:  default,matcher,vtwheel
-! URxvt.url-launcher:      /usr/bin/chromium
-URxvt.url-launcher:      /usr/bin/dwb
+URxvt.url-launcher:      /usr/bin/qutebrowser
 URxvt.matcher.button:   1
 
 ! key fixes

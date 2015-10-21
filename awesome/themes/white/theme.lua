@@ -23,7 +23,7 @@ theme.fg_minimize   = "#cccccc"
 
 theme.border_width  = 2
 theme.border_normal = "#555753"
-theme.border_focus  = "#33A0FF"
+theme.border_focus  = "#407ee7"
 theme.border_marked = "#91231c"
 
 -- There are other variable sets
@@ -83,7 +83,7 @@ theme.titlebar_maximized_button_focus_inactive  = dir .. "titlebar/maximized_foc
 theme.titlebar_maximized_button_normal_active = dir .. "titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = dir .. "titlebar/maximized_focus_active.png"
 
-theme.wallpaper = dir .. "background.png"
+theme.wallpaper = dir .. "77words_patternfever_16.gif"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = dir .. "layouts/fairh.png"
