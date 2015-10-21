@@ -34,24 +34,28 @@ function checkInstallPkg {
 
 ## home files
 link $HOME"/" bin
-link $HOME"/" .profile
-link $HOME"/" .xinitrc
 link $HOME"/" .bashrc
 link $HOME"/" .bash_profile
+link $HOME"/" .profile
+link $HOME"/" .xinitrc
 
 ## .config files
-link $CONF upm.properties
-link $CONF zathura
 link $CONF awesome
+link $CONF bash
+link $CONF git
 link $CONF kupfer
+link $CONF qutebrowser
+link $CONF upm.properties
 link $CONF xmodmap
 link $CONF xresources
-link $CONF qutebrowser
-link $CONF git
+link $CONF zathura
 
 ## /etc/ files
 sudolink $ETC slim.conf
 sudolink $ETC slimlock.conf
+
+## slim theme
+sudolink "/usr/share/slim/themes/" slim-minimal
 
 ## packages
 
