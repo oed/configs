@@ -7,8 +7,13 @@ SC1="HDMI1"
 SC2="VGA1"
 
 if (xrandr | grep "$SC_MAIN connected" -A 1 | grep \*); then
-    xautolock -disable & xmodmap ~/.config/xmodmap & xrandr --output $SC_MAIN --off --output $SC1 --auto && xrandr --output $SC2 --auto --right-of $SC1
+    xautolock -disable &
+    xmodmap ~/.config/xmodmap &
+    xrandr --output $SC_MAIN --off --output $SC1 --auto &&
+    xrandr --output $SC2 --auto --right-of $SC1
 else
-    xautolock -enable & xrandr --output $SC1 --off --output $SC2 --off --output $SC_MAIN --auto
+    xautolock -enable &
+    xrandr --output $SC1 --off --output $SC2 --off --output $SC_MAIN --auto &&
+    systemctl suspend
 fi
 
