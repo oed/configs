@@ -20,7 +20,7 @@ alias paclean='sudo pacman -Sc'
 alias pacsearch='pacman -Ss'
 
 # colors for programs
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 
 # other stuff
@@ -28,8 +28,10 @@ alias irkk="mosh joelto@hubben.chalmers.it"
 alias reload=". ~/.bashrc"
 alias svim="sudo vim "
 alias reloadxres="xrdb ~/.config/xresources"
+alias re="urxvt&"
 alias blank="feh -F ~/.config/bash/black.png"
 alias matlab="matlab -nodesktop -nosplash"
+alias open="xdg-open"
 alias android-mount="simple-mtpfs /media/phone/"
 alias android-umount="fusermount -u /media/phone"
 

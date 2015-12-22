@@ -80,7 +80,7 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {}
 for s = 1, screen.count() do
-    gears.wallpaper.tiled(beautiful.wallpaper, s, false)
+    gears.wallpaper.fit(beautiful.wallpaper, s, false)
     -- Each screen has its own tag table.
     tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
 end
@@ -385,9 +385,10 @@ awful.rules.rules = {
     { rule = { class = "gimp" },
       properties = { floating = true } },
     { rule = { class = "URxvt" },
-      properties = { opacity = 0.8 } },
+      properties = { opacity = 0.85 } },
     { rule = { class = "Kupfer.py" },
-      properties = { border_width = 0 } },
+      properties = { border_width = 0,
+                     opacity = 0.8 } },
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
