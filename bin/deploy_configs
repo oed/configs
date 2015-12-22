@@ -44,6 +44,7 @@ link $CONF awesome
 link $CONF bash
 link $CONF git
 link $CONF kupfer
+link $CONF nvim
 link $CONF qutebrowser
 link $CONF upm.properties
 link $CONF xmodmap
