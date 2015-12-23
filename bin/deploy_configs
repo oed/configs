@@ -41,6 +41,7 @@ link $HOME"/" .xinitrc
 
 ## .config files
 link $CONF awesome
+link $CONF base16-shell
 link $CONF bash
 link $CONF git
 link $CONF kupfer
