@@ -29,14 +29,6 @@
 # with Shift. For special keys (with `<>`-signs), you need to explicitly add
 # `Shift-` to match a key pressed with shift.  You can bind multiple commands
 # by separating them with `;;`.
-#
-# Note that default keybindings are always bound, and need to be explicitly
-# unbound if you wish to remove them:
-#
-# <unbound>
-#   keychain
-#   keychain2
-#   ...
 
 [!normal]
 
@@ -376,7 +368,7 @@ print
 open qute:settings
     Ss
 
-download-clear
+download-remove --all
     cd
 
 set tabs hide-always! ;; set ui hide-statusbar!
@@ -384,7 +376,6 @@ set tabs hide-always! ;; set ui hide-statusbar!
 
 download-open
     ,o
-    eo
 
 hint all tab-fg
     ;f
@@ -421,15 +412,6 @@ set-cmd-text -s :bookmark-load -t
 
 set-cmd-text -s :bookmark-load -w
     wB
-
-download-remove
-    er
-
-download-delete
-    ed
-
-download-remove -a
-    ear
 
 [insert]
 # Keybindings for insert mode.
