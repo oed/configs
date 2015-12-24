@@ -3,17 +3,21 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
 
+Plug 'bling/vim-airline'
+Plug 'myusuf3/numbers.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
 Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-fugitive'
-Plug 'bling/vim-airline'
+Plug 'vim-scripts/sessionman.vim'
 
 
 " To install:
 " python mode
-" sessionman
-" youcompleteme
-" neocomplete
+" jedi-vim?
+" go-vim
+" autosave?
 "
 
 call plug#end()
@@ -50,6 +54,7 @@ call plug#end()
 
     " Setting up the directories {
         set backup                  " Backups are nice ...
+        set backupdir=~/.local/share/nvim/backup
         if has('persistent_undo')
             set undofile                " So is persistent undo ...
             set undolevels=1000         " Maximum number of changes that can be undone
@@ -281,5 +286,12 @@ call plug#end()
             let g:airline_left_sep='›'  " Slightly fancier than '>'
             let g:airline_right_sep='‹' " Slightly fancier than '<'
         endif
+    " }
+    " deoplete.nvim {
+        let g:deoplete#enable_at_startup = 1
+        " use tab to forward cycle
+        inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+        " use shift tab to backward cycle
+        inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
     " }
 " }
