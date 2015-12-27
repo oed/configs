@@ -5,7 +5,9 @@ Plug 'chriskempson/base16-vim'
 
 Plug 'bling/vim-airline'
 Plug 'myusuf3/numbers.vim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeFind' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'Shougo/deoplete.nvim'

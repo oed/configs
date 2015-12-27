@@ -6,6 +6,7 @@ URxvt.urgentOnBell: true
 
 ! font
 URxvt.font: xft:Inconsolata:size=8
+Xft.hintstyle:  hintslight
 
 ! clickable urls
 URxvt.perl-ext-common:  default,matcher,vtwheel
