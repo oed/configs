@@ -381,6 +381,9 @@ awful.rules.rules = {
     { rule = { class = "pinentry" },
       properties = { floating = true } },
     { rule = { class = "MATLAB R2015b - academic use" },
+    -- pyplot
+      properties = { floating = true } },
+    { rule = { class = " " },
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
