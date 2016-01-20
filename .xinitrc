@@ -11,7 +11,7 @@ fi
 kupfer --no-splash &
 unclutter &
 numlockx &
-compton -cbfD 8 -e 0.8 -r 25 -o 1 -l -36 -t -34 &
+#compton -cbfD 8 -e 0.8 -r 25 -o 1 -l -36 -t -34 &
 xrdb -merge ~/.config/xresources &
 nm-applet &
 xautolock -locker lockscreen -time 10 &
