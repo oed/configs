@@ -24,6 +24,7 @@ alias ls='ls --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 
 # other stuff
+alias vim="nvim"
 alias irkk="mosh joelto@hubben.chalmers.it"
 alias reload=". ~/.bashrc"
 alias svim="sudo vim "
