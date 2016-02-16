@@ -55,6 +55,9 @@ link $CONF zathura
 ## /etc/ files
 sudolink $ETC slim.conf
 sudolink $ETC slimlock.conf
+X11="X11/xorg.conf.d/"
+sudolink $ETC $X11"10-keyboard.conf"
+sudolink $ETC $X11"50-synaptics.conf"
 
 ## slim theme
 sudolink "/usr/share/slim/themes/" slim-minimal
