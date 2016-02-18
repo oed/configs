@@ -47,6 +47,7 @@ link $CONF git
 link $CONF kupfer
 link $CONF nvim
 link $CONF qutebrowser
+link $CONF sxhkd
 link $CONF upm.properties
 link $CONF xmodmap
 link $CONF xresources
