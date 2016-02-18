@@ -9,6 +9,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 kupfer --no-splash &
+sxhkd &
 unclutter &
 numlockx &
 #compton -cbfD 8 -e 0.8 -r 25 -o 1 -l -36 -t -34 &
