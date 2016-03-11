@@ -27,7 +27,7 @@ alias grep='grep --color=auto'
 alias vim="nvim"
 alias irkk="mosh joelto@hubben.chalmers.it"
 alias reload=". ~/.bashrc"
-alias svim="sudo vim "
+alias svim="sudo -E nvim "
 alias reloadxres="xrdb ~/.config/xresources"
 alias re="urxvt&"
 alias blank="feh -F ~/.config/bash/black.png"

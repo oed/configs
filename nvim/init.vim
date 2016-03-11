@@ -12,7 +12,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/sessionman.vim'
+Plug 'xuhdev/vim-latex-live-preview'
 
 
 " To install:
@@ -309,5 +311,8 @@ call plug#end()
         inoremap <silent><expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
         " use shift tab to backward cycle
         inoremap <silent><expr><s-tab> pumvisible() ? "\<c-p>" : "\<s-tab>"
+    " }
+    " latex live preview {
+        let g:livepreview_previewer = 'zathura'
     " }
 " }

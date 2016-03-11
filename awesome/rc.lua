@@ -43,6 +43,8 @@ end
 -- Themes define colours, icons, and wallpapers
 beautiful.init("/home/oed/.config/awesome/themes/white/theme.lua")
 
+naughty.config.defaults.icon_size = 128
+
 -- This is used later as the default terminal and editor to run.
 terminal = "urxvt"
 editor = os.getenv("EDITOR") or "nano"
@@ -88,8 +90,11 @@ end
 
 -- Battery
 require("battery")
-
 batterywidget = battery.batwidget("BAT0", timer({ timeout = 10 }))
+
+-- Volume pulse
+require("pulseaudio")
+volumewidget = pulseaudio.volwidget(timer({ timeout = 5 }))
 
 -- Memory usage
 -- Initialize widget
@@ -210,6 +215,7 @@ for s = 1, screen.count() do
     right_layout:add(pacwidget)
     right_layout:add(cpuwidget)
     right_layout:add(memwidget)
+    right_layout:add(volumewidget)
     right_layout:add(batterywidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])

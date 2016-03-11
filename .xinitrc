@@ -15,11 +15,11 @@ numlockx &
 #compton -cbfD 8 -e 0.8 -r 25 -o 1 -l -36 -t -34 &
 xrdb -merge ~/.config/xresources &
 nm-applet &
-xautolock -locker lockscreen -time 10 &
+xautolock -locker slock -time 10 &
 
 # load keyboard layout
-if [ -f $HOME/.config/xmodmap ]; then
-    /usr/bin/xmodmap $HOME/.config/xmodmap
+if [ -s ~/.config/xmodmap ]; then
+    xmodmap ~/.config/xmodmap
 fi
 
 # gnome keyring

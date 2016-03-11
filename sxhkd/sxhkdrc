@@ -12,3 +12,9 @@ XF86AudioLowerVolume
 
 XF86AudioMute
     pactl set-sink-mute 0 toggle
+
+ctrl alt l
+    slock
+
+XF86Explorer
+    kupfer

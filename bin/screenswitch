@@ -2,9 +2,9 @@
 # This script is for switching screens when I connect
 # my laptop to my two external monitors.
 
-SC_MAIN="eDP1"
-SC1="HDMI1"
-SC2="VGA1"
+SC_MAIN="eDP-1"
+SC1="HDMI-1"
+SC2="VGA-1"
 
 if (xrandr | grep "$SC_MAIN connected" -A 1 | grep \*); then
     xautolock -disable &
