@@ -96,6 +96,10 @@ batterywidget = battery.batwidget("BAT0", timer({ timeout = 10 }))
 require("pulseaudio")
 volumewidget = pulseaudio.volwidget(timer({ timeout = 5 }))
 
+-- Mining monitor
+--require("miner")
+--miningwidget = miner.widget(timer({ timeout = 30 }))
+
 -- Memory usage
 -- Initialize widget
 memwidget = wibox.widget.textbox()
@@ -217,6 +221,7 @@ for s = 1, screen.count() do
     right_layout:add(memwidget)
     right_layout:add(volumewidget)
     right_layout:add(batterywidget)
+    --right_layout:add(miningwidget)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 

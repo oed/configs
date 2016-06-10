@@ -12,6 +12,8 @@ shopt -s checkwinsize
 # no duplicates in bash history
 export HISTCONTROL=ignoredups
 
+bind 'set completion-ignore-case on'
+
 # load aliases
 if [ -f "$HOME/.config/bash/aliases" ]; then
     source "$HOME/.config/bash/aliases"
@@ -42,3 +44,5 @@ export LESS='-R '
 export EDITOR='vim'
 export BROWSER='qutebrowser'
 
+
+export ANDROID_HOME=/opt/android-sdk

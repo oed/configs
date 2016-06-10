@@ -16,6 +16,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/sessionman.vim'
 Plug 'xuhdev/vim-latex-live-preview'
 
+Plug 'leafgarland/typescript-vim'
+Plug 'ethereum/vim-solidity'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+
 
 " To install:
 " python mode

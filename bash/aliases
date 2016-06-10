@@ -13,11 +13,12 @@ alias gstd="git stash drop"
 #alias gcd="cd '$(git rev-parse --show-toplevel)'"
 
 # pacman stuff
-alias pacupg='sudo pacman -Su'
+alias pacupg='sudo pacman -Syu'
 alias pacin='sudo pacman -S'
 alias pacrm='sudo pacman -Rns'
 alias paclean='sudo pacman -Sc'
 alias pacsearch='pacman -Ss'
+alias pacsize='expac -H M "%011m\t%-20n\t%10d" $(comm -23 <(pacman -Qqen | sort) <(pacman -Qqg base base-devel | sort)) | sort -n'
 
 # colors for programs
 alias ls='ls --color=auto --group-directories-first'
