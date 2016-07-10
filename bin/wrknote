@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+
+vim ~/wrk/notes/$(date +%Y-%m-%d)_$1.txt
