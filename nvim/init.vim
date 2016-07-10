@@ -76,7 +76,8 @@ call plug#end()
 " Vim UI {
 
     let base16colorspace=256  " Access colors present in 256 colorspace
-    colorscheme base16-atelierforest
+    colorscheme base16-solarized
+    "colorscheme base16-atelierforest
     "set background=dark         " Assume a dark background
 
     set tabpagemax=15               " Only show 15 tabs
