@@ -36,4 +36,5 @@ alias matlab="matlab -nodesktop -nosplash"
 alias open="xdg-open"
 alias android-mount="simple-mtpfs /media/phone/"
 alias android-umount="fusermount -u /media/phone"
+alias safari-debug="ios_webkit_debug_proxy -f chrome-devtools://devtools/bundled/inspector.html"
 

@@ -10,20 +10,23 @@ theme.font          = "clean 8"
 
 dir = "/home/oed/.config/awesome/themes/white/"
 -- theme.bg_normal     = "png:" .. dir .. "normal.png"
-theme.bg_normal     = "#FFFFFF"
+theme.bg_normal     = "#fdf6e3"
 theme.bg_focus      = "#555753"
 theme.bg_urgent     = "png:" .. dir .. "urgent.png"
 theme.bg_minimize   = "png:" .. dir .. "minimize.png"
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#555753"
-theme.fg_focus      = "#33A0FF"
-theme.fg_urgent     = "#ff0000"
-theme.fg_minimize   = "#cccccc"
+theme.fg_normal     = "#586e75"
+theme.fg_focus      = "#268bd2"
+theme.fg_urgent     = "#dc322f"
+theme.fg_minimize   = "#002b36"
 
-theme.border_width  = 2
-theme.border_normal = "#555753"
-theme.border_focus  = "#407ee7"
+theme.border_width  = 3
+--theme.border_normal = "#555753"
+--theme.border_normal = "#fdf6e3"
+theme.border_normal = "#002b36"
+theme.border_focus  = "#fdf6e3"
+--theme.border_focus  = "#268bd2"
 theme.border_marked = "#91231c"
 
 -- There are other variable sets
