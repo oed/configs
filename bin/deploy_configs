@@ -44,19 +44,19 @@ link $CONF awesome
 link $CONF base16-shell
 link $CONF bash
 link $CONF git
-link $CONF kupfer
+#link $CONF kupfer
 link $CONF nvim
 link $CONF qutebrowser
 link $CONF sxhkd
 link $CONF upm.properties
 link $CONF xmodmap
 link $CONF xresources
-link $CONF zathura
+#link $CONF zathura
 
 ## /etc/ files
 X11="X11/xorg.conf.d/"
-sudolink $ETC $X11"10-keyboard.conf"
-sudolink $ETC $X11"50-synaptics.conf"
+sudolink $ETC $X11"00-keyboard.conf"
+sudolink $ETC $X11"70-synaptics.conf"
 
 ## packages
 

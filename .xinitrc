@@ -8,10 +8,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
     unset f
 fi
 
-kupfer --no-splash &
+#kupfer --no-splash &
 sxhkd &
 unclutter &
-numlockx &
+#numlockx &
 #compton -cbfD 8 -e 0.8 -r 25 -o 1 -l -36 -t -34 &
 xrdb -merge ~/.config/xresources &
 nm-applet &

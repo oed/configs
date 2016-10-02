@@ -1,0 +1,17 @@
+xorg-server
+xorg-xinit
+xf86-video-intel
+awesome
+vicious
+sxhkd
+unclutter
+xautolock
+xorg-xrandr
+arandr
+network-manager-applet
+networkmanager
+networkmanager-openvpn
+git
+ttf-inconsolata
+pulseaudio
+pavucontrol
