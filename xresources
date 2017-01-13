@@ -5,7 +5,8 @@ URxvt.scrollBar: false
 URxvt.urgentOnBell: true
 
 ! font
-URxvt.font: xft:Inconsolata:size=8
+URxvt.font: xft:Inconsolata:size=8, xft:Symbola:size=10
+!URxvt.font: xft:Noto Emoji:style=Regular:size=16
 Xft.hintstyle:  hintslight
 
 ! clickable urls

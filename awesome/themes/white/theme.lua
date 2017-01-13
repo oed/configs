@@ -89,7 +89,8 @@ theme.titlebar_maximized_button_focus_active  = dir .. "titlebar/maximized_focus
 --theme.wallpaper = dir .. "77words_patternfever_16.gif"
 --theme.wallpaper = dir .. "background3.jpg"
 --theme.wallpaper = dir .. "background-dark.jpg"
-theme.wallpaper = dir .. "earth.jpg"
+--theme.wallpaper = dir .. "earth.jpg"
+theme.wallpaper = dir .. "cube.png"
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = dir .. "layouts/fairh.png"

@@ -6,7 +6,7 @@ status="$"
 git_branch=""
 columns=$(tput cols)
 
-PS1='\n\e[1;90m $status \e[0;37m\h \e[0;94m${newPWD} \e[0;35m$git_branch\e[0;90m\e[0m \n'
+PS1='\n\e[1;90m $status \e[0;37m\h \e[0;94m${newPWD} \e[0;35m$git_branch\e[0;90m\e[0m \n '
 
 function prompt_command {
     es=$?

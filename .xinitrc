@@ -16,6 +16,7 @@ unclutter &
 xrdb -merge ~/.config/xresources &
 nm-applet &
 xautolock -locker slock -time 10 &
+redshift -l 57.747778:11.909180 -t 5500K:2500K &
 
 # load keyboard layout
 if [ -s ~/.config/xmodmap ]; then

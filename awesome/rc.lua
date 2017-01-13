@@ -82,7 +82,7 @@ end
 -- Define a tag table which hold all screen tags.
 tags = {}
 for s = 1, screen.count() do
-    gears.wallpaper.fit(beautiful.wallpaper, s, false)
+    gears.wallpaper.tiled(beautiful.wallpaper, s)
     -- Each screen has its own tag table.
     tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
 end
@@ -95,6 +95,10 @@ batterywidget = battery.batwidget("BAT0", timer({ timeout = 10 }))
 -- Volume pulse
 require("pulseaudio")
 volumewidget = pulseaudio.volwidget(timer({ timeout = 5 }))
+
+-- ethereum blockNumber
+--require("ethblock")
+--ethwidget = ethblock.ethwidget(timer({ timeout = 15 }))
 
 -- Mining monitor
 --require("miner")
@@ -219,6 +223,7 @@ for s = 1, screen.count() do
     right_layout:add(pacwidget)
     right_layout:add(cpuwidget)
     right_layout:add(memwidget)
+    --right_layout:add(ethwidget)
     right_layout:add(volumewidget)
     right_layout:add(batterywidget)
     --right_layout:add(miningwidget)
@@ -292,7 +297,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () mypromptbox[mouse.screen]:run() end),
+    awful.key({ modkey,           }, "r",     function () mypromptbox[mouse.screen]:run() end),
 
     awful.key({ modkey }, "x",
               function ()
@@ -302,7 +307,7 @@ globalkeys = awful.util.table.join(
                   awful.util.getdir("cache") .. "/history_eval")
               end),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end)
+    awful.key({ modkey, "Mod1" },     "space", function() menubar.show() end)
 )
 
 clientkeys = awful.util.table.join(

@@ -38,3 +38,4 @@ alias android-mount="simple-mtpfs /media/phone/"
 alias android-umount="fusermount -u /media/phone"
 alias safari-debug="ios_webkit_debug_proxy -f chrome-devtools://devtools/bundled/inspector.html"
 
+alias signal="chromium --app-id=bikioccmkafdpakkkcpdbppfkghcmihk"
