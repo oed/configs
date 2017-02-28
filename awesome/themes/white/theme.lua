@@ -21,10 +21,11 @@ theme.fg_focus      = "#268bd2"
 theme.fg_urgent     = "#dc322f"
 theme.fg_minimize   = "#002b36"
 
-theme.border_width  = 3
+theme.border_width  = 4
 --theme.border_normal = "#555753"
 --theme.border_normal = "#fdf6e3"
 theme.border_normal = "#002b36"
+--theme.border_normal = "#ffffff"
 theme.border_focus  = "#fdf6e3"
 --theme.border_focus  = "#268bd2"
 theme.border_marked = "#91231c"

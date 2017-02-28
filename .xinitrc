@@ -12,7 +12,7 @@ fi
 sxhkd &
 unclutter &
 #numlockx &
-#compton -cbfD 8 -e 0.8 -r 25 -o 1 -l -36 -t -34 &
+compton -e 0.8 -o 0 -D 0 &
 xrdb -merge ~/.config/xresources &
 nm-applet &
 xautolock -locker slock -time 10 &
@@ -39,4 +39,5 @@ wmname LG3D
 
 # Start session
 exec awesome
+#exec bspwm
 
