@@ -6,14 +6,34 @@ SC_MAIN="eDP1"
 SC1="HDMI1"
 SC2="VGA1"
 
+#if (xrandr | grep "$SC_MAIN connected" -A 1 | grep \*); then
+    #xautolock -disable &
+    #xmodmap ~/.config/xmodmap &
+    #xrandr --output $SC_MAIN --off --output $SC1 --auto &&
+    #xrandr --output $SC2 --auto --right-of $SC1
+#else
+    #xautolock -enable &
+    #xrandr --output $SC1 --off --output $SC2 --off --output $SC_MAIN --auto &&
+    #sleep 5 #&&
+    ##systemctl suspend
+#fi
+
 if (xrandr | grep "$SC_MAIN connected" -A 1 | grep \*); then
     xautolock -disable &
     xmodmap ~/.config/xmodmap &
-    xrandr --output $SC_MAIN --off --output $SC1 --auto &&
-    xrandr --output $SC2 --auto --right-of $SC1
+    xrandr --output $SC1 --auto --right-of $SC_MAIN &&
+    xrandr --output $SC2 --auto --right-of $SC1 &&
+    sleep 5 &&
+    cat ~/bin/moveclients.lua | awesome-client &&
+    sleep 5 &&
+    xrandr --output $SC_MAIN --off
 else
     xautolock -enable &
-    xrandr --output $SC1 --off --output $SC2 --off --output $SC_MAIN --auto &&
+    xrandr --output $SC_MAIN --auto --left-of $SC1 &&
+    sleep 5 &&
+    cat ~/bin/moveclients.lua | awesome-client &&
+    sleep 5 &&
+    xrandr --output $SC1 --off --output $SC2 --off &&
     sleep 5 &&
     systemctl suspend
 fi

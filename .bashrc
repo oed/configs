@@ -36,8 +36,8 @@ case "$TERM" in
 [ -n "$XTERM_VERSION" ] && transset-df -a >/dev/null
 
 # Base16 Shell, colors yo
-BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized.light.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+#BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized.light.sh"
+#[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 export LESSOPEN="| /usr/bin/source-highlight-esc.sh %s"
 export LESS='-R '

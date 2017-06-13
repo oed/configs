@@ -12,9 +12,10 @@ fi
 sxhkd &
 unclutter &
 #numlockx &
-compton -e 0.8 -o 0 -D 0 &
+compton -e 0.8 -D 0 -o 0 &
 xrdb -merge ~/.config/xresources &
 nm-applet &
+blueman-applet &
 xautolock -locker slock -time 10 &
 redshift -l 57.747778:11.909180 -t 5500K:2500K &
 

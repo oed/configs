@@ -2,6 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
+Plug 'altercation/vim-colors-solarized'
 
 Plug 'bling/vim-airline'
 Plug 'myusuf3/numbers.vim'
@@ -75,8 +76,12 @@ call plug#end()
 
 " Vim UI {
 
-    let base16colorspace=256  " Access colors present in 256 colorspace
-    colorscheme base16-solarized
+    "let base16colorspace=256  " Access colors present in 256 colorspace
+    let g:solarized_termcolors=256
+    "let g:solarized_contrast="high"
+    set background=light
+    "colorscheme base16-solarized-light
+    colorscheme solarized
     "colorscheme base16-atelierforest
     "set background=dark         " Assume a dark background
 
@@ -238,6 +243,11 @@ call plug#end()
     endfunction
     " }
 
+    " Use ctrl-[hjkl] to select the active split!
+    nmap <silent> <c-k> :wincmd k<CR>
+    nmap <silent> <c-j> :wincmd j<CR>
+    nmap <silent> <c-h> :wincmd h<CR>
+    nmap <silent> <c-l> :wincmd l<CR>
 " }
 
 " Plugins {

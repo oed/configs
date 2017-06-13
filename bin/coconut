@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+urxvt -e ~/code/coconut/bin/cli.js get

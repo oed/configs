@@ -11,6 +11,7 @@ local naughty = require("naughty")
 local menubar = require("menubar")
 local vicious = require("vicious")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
+local poppin = require('poppin')
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -157,7 +158,7 @@ local function set_wallpaper(s)
         if type(wallpaper) == "function" then
             wallpaper = wallpaper(s)
         end
-        gears.wallpaper.tiled(wallpaper, s)
+        gears.wallpaper.fit(wallpaper, s)
     end
 end
 
@@ -197,6 +198,8 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
             s.mytaglist,
             s.mypromptbox,
+            batterywidget,
+            mytextclock,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
@@ -206,8 +209,6 @@ awful.screen.connect_for_each_screen(function(s)
             cpuwidget,
             memwidget,
             volumewidget,
-            batterywidget,
-            mytextclock,
             s.mylayoutbox,
         },
     }
@@ -292,6 +293,9 @@ globalkeys = awful.util.table.join(
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
+    awful.key({ modkey }, "p",
+          function () poppin.pop("coconut", "coconut", "center", 200, { border_width = 10 }) end,
+          {description = "Opens a poppin' coconut", group = "poppin"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()
